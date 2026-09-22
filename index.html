@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Tienda Forestal | Catálogo Oficial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: {
+                            900: '#052e16',
+                            800: '#14532d',
+                            600: '#16a34a',
+                            500: '#22c55e',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-bg {
+            background-image: url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-forest-900/95 backdrop-blur-sm border-b border-forest-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <span class="font-extrabold text-2xl tracking-tighter uppercase">La Tienda Forestal<span class="text-forest-500">.</span></span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#catalogo" class="text-white hover:text-forest-500 font-semibold uppercase text-sm tracking-wide transition">Colección Nothofaga</a>
+                    <a href="#catalogo" class="text-gray-300 hover:text-white font-semibold uppercase text-sm tracking-wide transition">Vestuario</a>
+                    <a href="#catalogo" class="text-gray-300 hover:text-white font-semibold uppercase text-sm tracking-wide transition">Accesorios</a>
+                </div>
+
+                <div class="flex items-center space-x-6">
+                    <button class="text-white hover:text-forest-500 transition">
+                        <i class="fas fa-search text-xl"></i>
+                    </button>
+                    <button class="text-white hover:text-forest-500 transition relative">
+                        <i class="fas fa-shopping-bag text-xl"></i>
+                        <span class="absolute -top-2 -right-2 bg-forest-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative h-screen hero-bg">
+        <div class="absolute inset-0 bg-gradient-to-b from-forest-900/70 via-forest-900/40 to-forest-900/90"></div>
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 max-w-5xl mx-auto">
+            <span class="text-forest-500 font-bold tracking-[0.2em] uppercase mb-4">Catálogo Oficial</span>
+            <h1 class="text-5xl md:text-8xl font-black text-white uppercase tracking-tight leading-tight drop-shadow-lg">
+                Colección <br> Nothofaga
+            </h1>
+            <p class="mt-6 text-lg md:text-xl text-gray-200 font-medium max-w-2xl drop-shadow">
+                Productos y vestuario oficial de la Facultad de Ciencias Forestales y de la Conservación de la Naturaleza.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row gap-4">
+                <a href="#catalogo" class="px-8 py-4 bg-forest-600 hover:bg-forest-500 text-white font-bold uppercase tracking-widest text-sm transition transform hover:-translate-y-1 hover:shadow-lg hover:shadow-forest-500/30">
+                    Ver Catálogo
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barra de Información -->
+    <div class="bg-forest-900 text-gray-300 py-4 border-b border-forest-800">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-center items-center gap-8 text-sm font-semibold uppercase tracking-wide">
+            <div class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-forest-500"></i> Retiro en Campus Antumapu</div>
+            <div class="hidden md:block text-forest-800">|</div>
+            <div class="flex items-center gap-2"><i class="fas fa-lock text-forest-500"></i> Pago Seguro y Directo</div>
+            <div class="hidden md:block text-forest-800">|</div>
+            <div class="flex items-center gap-2"><i class="fas fa-box text-forest-500"></i> Stock Limitado</div>
+        </div>
+    </div>
+
+    <!-- Catálogo -->
+    <div id="catalogo" class="max-w-7xl mx-auto px-4 py-24">
+        <div class="flex justify-between items-end mb-12 border-b border-gray-200 pb-4">
+            <h2 class="text-3xl md:text-4xl font-black text-forest-900 uppercase tracking-tight">Productos</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Producto 1 -->
+            <div class="group cursor-pointer">
+                <div class="relative bg-gray-200 aspect-[3/4] overflow-hidden mb-4">
+                    <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&q=80&w=800" alt="Polerón" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-forest-900 uppercase">Polerón Nothofaga</h3>
+                        <p class="text-sm text-gray-500">Verde Bosque / Algodón</p>
+                    </div>
+                    <span class="font-bold text-forest-900">$25.000</span>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="group cursor-pointer">
+                <div class="relative bg-gray-200 aspect-[3/4] overflow-hidden mb-4">
+                    <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=800" alt="Libreta" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
+                    <div class="absolute top-4 left-4 bg-forest-900 text-white text-xs font-bold px-2 py-1 uppercase">Nuevo</div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-forest-900 uppercase">Bitácora de Campo</h3>
+                        <p class="text-sm text-gray-500">Tapa dura / 100 hojas</p>
+                    </div>
+                    <span class="font-bold text-forest-900">$8.500</span>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="group cursor-pointer">
+                <div class="relative bg-gray-200 aspect-[3/4] overflow-hidden mb-4">
+                    <div class="w-full h-full bg-gray-200 flex items-center justify-center text-gray-400"><i class="fas fa-image text-4xl"></i></div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-forest-900 uppercase">Tazón Enlozado</h3>
+                        <p class="text-sm text-gray-500">Metal / 350ml</p>
+                    </div>
+                    <span class="font-bold text-forest-900">$6.000</span>
+                </div>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="group cursor-pointer">
+                <div class="relative bg-gray-200 aspect-[3/4] overflow-hidden mb-4">
+                    <div class="w-full h-full bg-gray-200 flex items-center justify-center text-gray-400"><i class="fas fa-image text-4xl"></i></div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-forest-900 uppercase">Jockey Trucker</h3>
+                        <p class="text-sm text-gray-500">Malla trasera / Bordado</p>
+                    </div>
+                    <span class="font-bold text-forest-900">$12.000</span>
+                </div>
+            </div>
+
+            <!-- Producto 5 -->
+            <div class="group cursor-pointer">
+                <div class="relative bg-gray-200 aspect-[3/4] overflow-hidden mb-4">
+                    <div class="w-full h-full bg-gray-200 flex items-center justify-center text-gray-400"><i class="fas fa-image text-4xl"></i></div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-forest-900 uppercase">Mochila Expedición</h3>
+                        <p class="text-sm text-gray-500">Resistente al agua / 25L</p>
+                    </div>
+                    <span class="font-bold text-forest-900">$35.000</span>
+                </div>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="group cursor-pointer">
+                <div class="relative bg-gray-200 aspect-[3/4] overflow-hidden mb-4">
+                    <div class="w-full h-full bg-gray-200 flex items-center justify-center text-gray-400"><i class="fas fa-image text-4xl"></i></div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-forest-900 uppercase">Polera Clásica</h3>
+                        <p class="text-sm text-gray-500">100% Algodón Orgánico</p>
+                    </div>
+                    <span class="font-bold text-forest-900">$15.000</span>
+                </div>
+            </div>
+
+            <!-- Producto 7 -->
+            <div class="group cursor-pointer">
+                <div class="relative bg-gray-200 aspect-[3/4] overflow-hidden mb-4">
+                    <div class="w-full h-full bg-gray-200 flex items-center justify-center text-gray-400"><i class="fas fa-image text-4xl"></i></div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-forest-900 uppercase">Gorro de Lana</h3>
+                        <p class="text-sm text-gray-500">Tejido grueso / Logo parche</p>
+                    </div>
+                    <span class="font-bold text-forest-900">$10.000</span>
+                </div>
+            </div>
+
+            <!-- Producto 8 -->
+            <div class="group cursor-pointer">
+                <div class="relative bg-gray-200 aspect-[3/4] overflow-hidden mb-4">
+                    <div class="w-full h-full bg-gray-200 flex items-center justify-center text-gray-400"><i class="fas fa-image text-4xl"></i></div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-forest-900 uppercase">Llavero Madera</h3>
+                        <p class="text-sm text-gray-500">Grabado láser / Madera nativa</p>
+                    </div>
+                    <span class="font-bold text-forest-900">$4.000</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-forest-900 text-white py-12 border-t border-forest-800 mt-12">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h4 class="font-black text-2xl uppercase tracking-tighter mb-4">La Tienda Forestal<span class="text-forest-500">.</span></h4>
+                <p class="text-gray-400 text-sm max-w-sm">
+                    Tienda oficial de productos de la Facultad de Ciencias Forestales y de la Conservación de la Naturaleza. Universidad de Chile.
+                </p>
+            </div>
+            <div class="md:text-right text-gray-400 text-sm flex flex-col justify-end">
+                <p>Campus Antumapu</p>
+                <p>Av. Santa Rosa 11315, La Pintana, Santiago.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
